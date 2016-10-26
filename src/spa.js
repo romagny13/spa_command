@@ -13,7 +13,6 @@ function getExceptElements(exceptSelectors) {
 }
 
 function isInExceptScope(element, exceptElements) {
-    console.log(exceptElements);
     for (var i = 0; i < exceptElements.length; i++) {
         if (exceptElements[i].contains(element)) return true;
     }
@@ -86,7 +85,6 @@ var binder = (function () {
                 if (command.commandElements.length > 0) commands[propertyName] = command;
             }
         }
-        console.log(commands);
         return commands;
     }
 
@@ -100,5 +98,5 @@ var binder = (function () {
 
 export default {
     binder : binder,
-    version : "0.1.0"
+    version : "0.1.1"
 };

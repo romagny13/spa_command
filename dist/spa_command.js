@@ -1,5 +1,5 @@
 /*!
- * Spa Command v0.1.0
+ * Spa Command v0.1.1
  * (c) 2016 Romagny13
  * Released under the MIT License.
  */
@@ -118,7 +118,6 @@
     }
 
     function isInExceptScope(element, exceptElements) {
-        console.log(exceptElements);
         for (var i = 0; i < exceptElements.length; i++) {
             if (exceptElements[i].contains(element)) return true;
         }
@@ -190,7 +189,6 @@
                     if (command.commandElements.length > 0) commands[propertyName] = command;
                 }
             }
-            console.log(commands);
             return commands;
         }
 
@@ -202,7 +200,7 @@
 
     var spa = {
         binder: binder,
-        version: "0.1.0"
+        version: "0.1.1"
     };
 
     return spa;
