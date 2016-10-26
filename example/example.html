@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Simple command with a function</h1>
+    <button data-event="click:mycommand">My command</button>
+
+    <h1>Commands defined in an object (object with only command function or a view model for example)</h1>
+    <button data-event="click:mycommand1">My command 1</button>
+
+    <h2>Multiples events</h2>
+    <input type="text" data-event="blur:mycommand2;keypress:mycommand2" />
+
+
+    <h2>Commands could be scoped (with config except : array of selectors).</h2>
+    <div class="not-bind">
+        <button data-event="click:mycommand1">My command 1</button>
+    </div>
+
+
+    <script src="../dist/spa_command.js"></script>
+    <script>
+
+        spa.binder.bindCommand("mycommand", function (e) {
+            console.log("do something with my command", e);
+        });
+
+
+        var vm = {
+            title: "My title",
+            mycommand1: function (e) {
+                console.log(this, e); // context
+                // access to context data
+                this.title = "My new title";
+                console.log(vm);
+            },
+            mycommand2: function (e) {
+                console.log("mycomand2",e);
+            },
+        };
+
+        spa.binder.bindCommands(vm, {
+            except: [".not-bind"],
+            extra: {
+                value: "my value"
+            }
+        });
+
+    </script>
+</body>
+</html>
