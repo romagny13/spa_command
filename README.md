@@ -27,7 +27,7 @@ var vm = {
     title: "My title",
     mycommand1: function (e) {
         console.log(this); // context vm
-        // access to context data
+        // access to the context
         this.title = "My new title";
     },
     mycommand2: function (e) {
