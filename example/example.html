@@ -25,7 +25,7 @@
     <script src="../dist/spa_command.js"></script>
     <script>
 
-        spa.binder.bindCommand("mycommand", function (e) {
+        var command = spa.binder.bindCommand("mycommand", function (e) {
             console.log("do something with my command", e);
         });
 
@@ -43,7 +43,7 @@
             },
         };
 
-        spa.binder.bindCommands(vm, {
+        var commands = spa.binder.bindCommands(vm, {
             except: [".not-bind"],
             extra: {
                 value: "my value"
