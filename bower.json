@@ -1,0 +1,22 @@
+{
+  "name": "spacommand",
+  "description": "A simple way to bind commands.",
+  "main": "index.js",
+  "authors": [
+    "romagny13 <romagny13@yahoo.fr>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "spa",
+    "command",
+    "js"
+  ],
+  "homepage": "https://github.com/romagny13/spa_command",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

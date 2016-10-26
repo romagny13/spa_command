@@ -4,8 +4,16 @@ A simple way to bind commands.
 
 ## Installation
 
+NPM 
+
 ```
 npm install spa_command --save
+```
+
+Bower
+
+```
+bower install spa_command --save
 ```
 
 ## Bind a command with a function
