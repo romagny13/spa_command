@@ -54,7 +54,7 @@ The command will be raised on "blur" (lost focus) and "keypress" for example
 
 - scope : by default is "body". Could be change by selector (example "#mydiv") or with the html element
 - eventAttribute : by default "data-event"
-- context : allow to change the context of command
+- context : allow to change the context of the command
 - except : allow to ignore elements 
 - extra : allow to pass extra data
 
